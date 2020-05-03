@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Settings">
+
+
+
+        <ListPreference android:title="Push notifications"
+            android:summary="Choose the time interval between updates"
+            android:key="list_preference"
+            android:entryValues="@array/list_values"
+            android:entries="@array/list_entries"
+            />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
