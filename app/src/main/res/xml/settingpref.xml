@@ -13,6 +13,22 @@
             android:entries="@array/list_entries"
             />
 
+
+
+        <ListPreference android:title="Category"
+            android:summary="Choose the news category for news updates "
+            android:key="list_preference_categories"
+            android:entryValues="@array/list_values_categories"
+            android:entries="@array/list_entries_categories"
+            />
+
+        <ListPreference android:title="Country"
+            android:summary="Choose your country for current news that suitable for you "
+            android:key="list_preference_countries"
+            android:entryValues="@array/list_values_countries"
+            android:entries="@array/list_entries_countries"
+            />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

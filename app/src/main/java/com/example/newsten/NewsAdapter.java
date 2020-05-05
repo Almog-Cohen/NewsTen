@@ -32,7 +32,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     interface MyNewsListener {
 
         void OnNewsClicked(int position,View view);
-
     }
 
     public NewsAdapter(Context context, List<Articles> articles) {
@@ -41,16 +40,15 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     }
 
     public void setMyNewsListener(MyNewsListener myNewsListener){
+
         this.myNewsListener=myNewsListener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.articles_items,parent,false);
-
-
-
         return new ViewHolder(view);
     }
 
@@ -59,9 +57,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
         //set new object and get it from postion
         Articles a = articles.get(position);
-
-
-
         holder.tvTitle.setText(a.getTitle());
         holder.tvDate.setText(a.getPublishedAt());
         holder.tvDate.setText("\u2022"+dateTime(a.getPublishedAt()));
@@ -69,17 +64,12 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         holder.tvSource.setAlpha(0.5f);
 
         String imageUrl = a.getUrlToImage();
-
-
-
         Glide.with(holder.imageView.getContext()).load(imageUrl).into(holder.imageView);
-
-
-
     }
 
     @Override
     public int getItemCount() {
+
         return articles.size();
     }
 
@@ -101,18 +91,16 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
                     if (myNewsListener!=null)
                         myNewsListener.OnNewsClicked(getAdapterPosition(),view);
-
                 }
             });
-
-
 
         }
     }
 
-
+//Make new time format for the article
     public String dateTime(String str){
         PrettyTime prettyTime = new PrettyTime(new Locale(getCountry()));
         String time = null ;
@@ -125,9 +113,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         }
          return time;
         }
-
-
-
 
 
     public  String getCountry() {

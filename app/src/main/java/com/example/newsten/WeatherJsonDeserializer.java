@@ -36,7 +36,7 @@ public class WeatherJsonDeserializer implements JsonDeserializer {
                 weathers.get(i).setWeatherDesc(weatherObject.get("description").getAsString());
             }
         }catch (JsonParseException jpe){
-            Log.e("shuki", String.format("Could not deserialize Weather element: %s", json.toString()));
+
         }
 
         return weathers;

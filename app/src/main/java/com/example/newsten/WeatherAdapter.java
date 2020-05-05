@@ -24,23 +24,12 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.Forecast
     private static final String BASE_ICON_URL = "https://www.weatherbit.io/static/img/icons/";
     private Context fCtx;
     private List<Weather> weathers;
-//    private String latLon = null;
-
-//    private interface ForecastListener{
-//        void onForecastClicked(int position);
-//    }
-
-//    public void setForecastListener(ForecastListener listener){
-//    }
 
     public WeatherAdapter(Context fCtx, List<Weather> weathers) {
         this.fCtx = fCtx;
         this.weathers = weathers;
     }
 
-//    public WeatherAdapter(List<Weather> weathers){
-//        this.weathers = weathers;
-//    }
 
     public static class ForecastViewHolder extends RecyclerView.ViewHolder{
         ImageView forecastIconIv;
@@ -64,10 +53,9 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.Forecast
     @NonNull
     @Override
     public ForecastViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, int viewType) {
-       View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.weather_items, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.weather_items, parent, false);
 
-        //working
-      return new ForecastViewHolder(view);
+        return new ForecastViewHolder(view);
     }
 
     @Override
@@ -86,6 +74,7 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.Forecast
 
     @Override
     public int getItemCount() {
+
         return weathers.size();
     }
 

@@ -133,23 +133,4 @@ public class Weather {
         this.forecastMinDegrees = forecastMinDegrees;
     }
 
-    private String hebrewDay(String dayOfTheWeek) {
-        switch (dayOfTheWeek) {
-            case "Sunday":
-                return "ראשון";
-            case "Monday":
-                return "שני";
-            case "Tuesday":
-                return "שלישי";
-            case "Wednesday":
-                return "רביעי";
-            case "Thursday":
-                return "חמישי";
-            case "Friday":
-                return "שישי";
-            case "Saturday":
-                return "שבת";
-        }
-        return "";
-    }
 }

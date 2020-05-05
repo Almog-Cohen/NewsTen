@@ -14,7 +14,6 @@ import retrofit2.Response;
 
 public class WeatherViewModel extends ViewModel {
 
-    private static final String TAG = "CHECK_URL";
     private static MutableLiveData<List<Weather>> forecastList;
 
     public MutableLiveData<List<Weather>> getForecastList(double lat, double lon) {
@@ -29,7 +28,6 @@ public class WeatherViewModel extends ViewModel {
         Api api = ApiUtil.getRetrofitApi("weather");
 
         Call<ArrayList<Weather>> call = api.getForecasts(String.valueOf(lat), String.valueOf(lon), "14", "a3622afd0ff041b68c9c853f2e730e19");
-        Log.d(TAG, "onResponse: ConfigurationListener::"+call.request().url()); //for debugging
 
         call.enqueue(new Callback<ArrayList<Weather>>() {
             @Override
@@ -39,19 +37,11 @@ public class WeatherViewModel extends ViewModel {
 
             @Override
             public void onFailure(Call<ArrayList<Weather>> call, Throwable t) {
-                Log.d("Error", "Failed to create list");
                 t.printStackTrace();
             }
         });
 
     }
 
-    public static Weather getForecast(int position){
-        try{
-            return forecastList.getValue().get(position);
-        }catch (IndexOutOfBoundsException e){
-            Log.d("Get Weather", "The position: " + position + "is not available");
-            return null;
-        }
-    }
+
 }

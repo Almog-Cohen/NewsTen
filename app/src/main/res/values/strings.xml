@@ -12,10 +12,54 @@
 
     <string-array name="list_values">
 
-        <item>60</item>
+        <item>10</item>
         <item>3600</item>
         <item>216000</item>
         <item>0</item>
+    </string-array>
+
+    <string-array name="list_entries_categories">
+
+        <item>Business</item>
+        <item>Entertainment</item>
+        <item>Sports</item>
+        <item>Technology</item>
+        <item>Health</item>
+        <item>General</item>
+        <item>Science</item>
+
+    </string-array>
+
+
+
+    <string-array name="list_values_categories">
+
+        <item>business</item>
+        <item>entertainment</item>
+        <item>sports</item>
+        <item>technology</item>
+        <item>health</item>
+        <item>general</item>
+        <item>science</item>
+
+    </string-array>
+
+    <string-array name="list_entries_countries">
+
+        <item>United States</item>
+        <item>Israel</item>
+        <item>Russia</item>
+
+
+    </string-array>
+
+    <string-array name="list_values_countries">
+
+        <item>us</item>
+        <item>il</item>
+        <item>ru</item>
+
+
     </string-array>
 
 
