@@ -2,18 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detailed_linear"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Detailed"
-    android:id="@+id/detailed_linear">
+    tools:context=".Detailed">
 
 
     <Button
+        android:id="@+id/back_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="@drawable/backbtn"
-        android:id="@+id/back_btn"/>
+        android:background="@drawable/backbtn" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -24,73 +24,13 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-        <!--    <Button
-                android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Go back"
-            android:id="@+id/back_btn"/>-->
 
-<WebView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/web_view">
+            <WebView
+                android:id="@+id/web_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-
-
-</WebView>
-<!--<ImageView
-    android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:id="@+id/image_tv"
-
-    />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:text="HELLLO"
-        android:padding="5dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/title_txt"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="DESC"
-        android:padding="5dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/title_desc"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="Content"
-        android:padding="5dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/content_txt"/>
-
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:text="Author"
-        android:padding="5dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/author_txt"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:text="Source"
-        android:padding="5dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/source_txt"/>-->
+            </WebView>
 
         </LinearLayout>
 

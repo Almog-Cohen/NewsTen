@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory
-        android:title="Settings">
+    <PreferenceCategory android:title="Settings">
 
 
 
-        <ListPreference android:title="Push notifications"
-            android:summary="Choose the time interval between updates"
-            android:key="list_preference"
-            android:entryValues="@array/list_values"
+
+
+        <ListPreference
             android:entries="@array/list_entries"
-            />
+            android:entryValues="@array/list_values"
+            android:key="list_preference"
+            android:summary="Choose the time interval between updates"
+            android:title="Push notifications" />
 
 
-
-        <ListPreference android:title="Category"
-            android:summary="Choose the news category for news updates "
-            android:key="list_preference_categories"
-            android:entryValues="@array/list_values_categories"
+        <ListPreference
             android:entries="@array/list_entries_categories"
-            />
+            android:entryValues="@array/list_values_categories"
+            android:key="list_preference_categories"
+            android:summary="Choose the news category for news updates "
+            android:title="Category" />
 
-        <ListPreference android:title="Country"
-            android:summary="Choose your country for current news that suitable for you "
-            android:key="list_preference_countries"
-            android:entryValues="@array/list_values_countries"
+        <ListPreference
             android:entries="@array/list_entries_countries"
-            />
+            android:entryValues="@array/list_values_countries"
+            android:key="list_preference_countries"
+            android:summary="Choose your country for current news that suitable for you "
+            android:title="Country" />
 
     </PreferenceCategory>
 
+
+
 </PreferenceScreen>
+

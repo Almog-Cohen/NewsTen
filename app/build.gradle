@@ -37,6 +37,10 @@ dependencies {
     //Dexter - For request runtime permission
     implementation "com.karumi:dexter:5.0.0"
 
+    //grid layout
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'androidx.preference:preference:1.1.0'
+
     //Retrofit
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'

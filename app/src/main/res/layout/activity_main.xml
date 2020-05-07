@@ -9,43 +9,40 @@
     android:orientation="vertical"
     android:background="@color/black">
 
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="News"
-        android:gravity="center"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:padding="10dp"
-        android:background="@drawable/gradient"/>
-
+    <include
+        layout="@layout/app_toolbar"
+        android:id="@+id/app_bar">
+    </include>
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/weather_container"
-        >
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:id="@+id/weather_container">
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show corona cases"
+            android:id="@+id/corona_btn"/>
 
     </FrameLayout>
 
-    <View
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="27dp"
+        android:text="News"
+        android:textSize="13sp"
+        android:padding="5dp"
         android:background="@color/grey"/>
 
     <FrameLayout
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
         android:id="@+id/news_container">
-
     </FrameLayout>
-
-
 
 
 </LinearLayout>

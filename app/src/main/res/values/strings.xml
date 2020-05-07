@@ -2,6 +2,7 @@
     <string name="app_name">NewsTen</string>
 
 
+
     <string-array name="list_entries">
 
         <item>Every minute</item>

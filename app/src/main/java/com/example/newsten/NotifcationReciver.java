@@ -97,6 +97,7 @@ public class NotifcationReciver extends BroadcastReceiver {
         alarmManager.set(AlarmManager.RTC_WAKEUP,System.currentTimeMillis() + time*1000,pendingIntent);
     }
 
+    // Saving one random  article for the notification
     public void saveNotificationArtilce(Context context){
 
         Random rand = new Random();
